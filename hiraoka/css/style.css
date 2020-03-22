@@ -1,0 +1,78 @@
+/* reset */
+ul{
+  list-style-type:none;
+  margin:0;
+}
+
+/*tab*/
+.Tab-button-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  z-index: -1;
+}
+
+.Tab-button {
+  border-radius: 3px 3px 0 0;
+  background-color: #eee;
+  cursor: pointer;
+  padding: 15px 0;
+  text-align: center;
+  width: 160px;
+}
+
+.Tab-button.current {
+  background-color: #fff;
+  border: solid 1px #ccc;
+  border-bottom: none;
+  position: relative;
+}
+
+.Tab-button.current:after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  z-index: 1;
+}
+
+.Tab-contents {
+  border: solid 1px #ccc;
+  padding: 20px;
+}
+
+.Tab-content {
+  display: none;
+}
+
+.Tab-content.current {
+  display: block;
+  -webkit-animation: fadeIn .5s ease 0s;
+  animation: fadeIn .5s ease 0s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
